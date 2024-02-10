@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>GFG</title>
+</head>
+<body>
+<h1>Register Geek</h1>
+
+<form method="POST" th:action="@{/jdbc}" th:object="${obj}">
+
+    <label for="user">User: </label><br/>
+    <input type="text" th:field="*{user}"/><br/>
+
+    <label for="username">Username: </label><br/>
+    <input type="text" th:field="*{userName}"/><br/>
+
+    <label for="password">Password: </label><br/>
+    <input type="password" th:field="*{password}"/>
+
+    <input type="submit" value="Register"/>
+
+</form>
+</body>
+</html>
